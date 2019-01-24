@@ -312,6 +312,8 @@ var Frozen = {
 		Utils.each( node, function( child, key ){
 			if( child === oldChild ){
 				child = newChild;
+			} else {
+				me.removeParent( oldChild, node );
 			}
 
 			if( child && (__ = child.__) ){
